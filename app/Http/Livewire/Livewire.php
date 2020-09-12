@@ -6,6 +6,10 @@ use Livewire\Component;
 
 class Livewire extends Component
 {
+    public $CreatForm = true;
+    public $EditForm = true;
+    public $PaginationForm = false;
+
     public function render()
     {
         return view('livewire.livewire');
