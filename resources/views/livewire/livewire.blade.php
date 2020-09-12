@@ -9,22 +9,23 @@
             </div>
             <ul class="list-group list-group-flush m-0">
                 <li class="list-group-item">
-                    <input id='creat-form' type="checkbox" wire:model='CreatForm'>
+                    <input id='creat-form' type="checkbox">
                     <label for="creat-form">Formulario de criação de herois</label>
                 </li>
                 <li class="list-group-item">
-                    <input id='edit-form' type="checkbox" wire:model='EditForm'>
+                    <input id='edit-form' type="checkbox">
                     <label for="edit-form">Edição de herois</label>
                 </li>
                 <li class="list-group-item">
-                    <input id='pagination-form' type="checkbox" wire:model='PaginationForm'>
+                    <input id='pagination-form' type="checkbox">
                     <label for="pagination-form">Paginação dos herois</label>
                 </li>
             </ul>
         </div>
         @if ($CreatForm)
         <div class="col-12 border border-primary rounded m-2 p-0">
-            <livewire:create-form>
+            {{-- colocar component da criação dos heróis aqui --}}
+            @include('livewire.create-form')
         </div>
         @endif
     </div>
@@ -32,14 +33,16 @@
         <div>
             @if ($EditForm)
             <div class="col-12 border border-primary rounded m-0 mb-3 p-0">
-                <livewire:edit-form>
+                {{-- colocar component da edição dos heróis aqui --}}
+                @include('livewire.edit-form')
             </div>
             @endif
         </div>
         <div>
             @if ($PaginationForm)
             <div class="col-12 border border-primary rounded m-0 p-0">
-                <livewire:pagination-form />
+                {{-- colocar component da listagem dos heróis aqui --}}
+                @include('livewire.pagination-form')
             </div>
             @endif
         </div>
