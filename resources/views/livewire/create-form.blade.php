@@ -1,4 +1,4 @@
-<div class="card m-0 p-0" wire:poll.3s>
+<div class="card m-0 p-0" wire:poll.30s>
     <h4 class='card-header'>Criação de heroi</h4>
     <div class="p-2">
         @include('livewire.includes.formHero')

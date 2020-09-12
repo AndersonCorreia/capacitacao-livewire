@@ -1,4 +1,4 @@
-<div class="col-12 row m-0 p-0" wire:poll.3s>
+<div class="col-12 row m-0 p-0" wire:poll.30s>
     <div class="col-12 border-bottom border-primary p-0" style="background-color: aliceblue">
         <h4 class="text-primary p-4 text-center"> Vamos ver um pouco do que o livewire pode fazer.</h4>
     </div>
@@ -29,15 +29,19 @@
         @endif
     </div>
     <div class="col-8 m-0 p-2" style="height: 80vh">
-        @if ($EditForm)
-        <div class="col-12 border border-primary rounded min-h-50 m-0 mb-3 p-0">
-            <livewire:edit-form >
+        <div>
+            @if ($EditForm)
+            <div class="col-12 border border-primary rounded m-0 mb-3 p-0">
+                <livewire:edit-form>
+            </div>
+            @endif
         </div>
-        @endif
-        @if ($PaginationForm)
-        <div class="col-12 border border-primary rounded h-50 m-0">
-            {{-- adcionar componente da paginação --}}
+        <div>
+            @if ($PaginationForm)
+            <div class="col-12 border border-primary rounded m-0 p-0">
+                <livewire:pagination-form />
+            </div>
+            @endif
         </div>
-        @endif
     </div>
 </div>

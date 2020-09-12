@@ -28,6 +28,7 @@ class CreateForm extends Component
         $this->validate();
         $this->hero->save();
         $this->hero = new Hero();
+        $this->emit('heroesChange');
         $this->heroCreated = true;
     }
     

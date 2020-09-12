@@ -8,7 +8,7 @@ class Livewire extends Component
 {
     public $CreatForm = true;
     public $EditForm = true;
-    public $PaginationForm = false;
+    public $PaginationForm = true;
 
     public function render()
     {
